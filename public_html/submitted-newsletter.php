@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+/*$servername = "localhost";
 $username = "SandraWight";
 $password = "wightwoman";
 
@@ -14,12 +14,25 @@ if (mysqli_query($conn, $sql)) {
     echo "Database created successfully";
 } else {
     echo "Error creating database: " . mysqli_error($conn);
+}*/
+
+/*$email = newsletter($_POST[email]);
+$name = newsletter($_POST[name]);
+
+$sql = "INSERT INTO emailList (name, email) VALUES ($name, $email)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-$email = newsletter($_POST[email]);
+$conn->close();*/
 
-
-
-
+/*<?php*/
+header( 'Location: /index.html' ) ;
+/*?>*/
 
 ?>
+
+
