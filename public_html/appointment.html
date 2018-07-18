@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Make an Appointment | Sandra Wight</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="navbar.css">
+        <script src="NavPane.js"></script>
+    </head>
+
+    <body>
+        <div class="navbar">
+            <div id="name"><img src="logo.png" style="width: 7.4%; float: left;"></div>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="">Recipes</a>  
+            <a href="meditation.html">Meditations</a>
+            <a href="newsletter.html">Newsletter</a>
+            <a href="" target="_blank">Shop</a>
+            <a href="contact.html">Contact Me</a>
+            <a href="" target="_blank"><img src="facebook.png" alt="Facebook" style="width:200px;height:200px;border:0;"></a>  
+            <a href="" target="_blank"><img src="instagram.png" alt="Instagram" style="width:200px;height:200px;border:0;"></a>
+        </div>
+
+        <div id="main">
+            If you would like to make an appointment, please fill in your details below.
+            Once submitted, I will contact you to confirm your appointment.
+            <br><br>PLEASE NOTE: Requesting an appointment here is not a confirmed booking. 
+            <br>Appointment times are subject to availability.
+            <br><br>
+
+                <form action="send_appointment.php" id="appointmentform" method="POST">
+                    First name: 
+                    <input type="text" name="firstname" placeholder="First Name"><br>
+                    Last name:
+                    <input type="text" name="lastname" placeholder="Last Name"><br>
+                    Email:
+                    <input type="email" name="email" placeholder="Your Email"><br>
+                    Contact phone:
+                    <input type="text" name="phone" placeholder="Your Phone"><br>
+                    Date:
+                    <input type="date" name="date" placeholder="dd/mm/yyyy"><br>
+                    Time:
+                    <input type="time" name="time" placeholder="mm : hh"><br><br>
+                    Comments:
+                    <textarea name="comments" form="appointmentform"> </textarea><br>
+                    <input type="submit" value="Send"><br>
+                    <br>
+                </form> 
+            
+            </div>
+    </body>
+</html>
