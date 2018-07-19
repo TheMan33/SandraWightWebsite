@@ -9,12 +9,9 @@
     </head>
 
     <body>
+        <div id="name"><img src="logo.png" style="width: 7.4%; float: left;"></div>
         <div class="navbar">
-            <div id="name"><img src="logo.png" style="width: 7.4%; float: left;"></div>
             <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="">Recipes</a>  
-            <a href="meditation.html">Meditations</a>
             <a href="newsletter.html">Newsletter</a>
             <a href="" target="_blank">Shop</a>
             <a href="contact.html">Contact Me</a>
@@ -30,22 +27,24 @@
             <br><br>
 
                 <form action="send_appointment.php" id="appointmentform" method="POST">
-                    First name: 
+                    <fieldset>
+                    <label for="firstname">First name:</label>
                     <input type="text" name="firstname" placeholder="First Name"><br>
-                    Last name:
+                    <label for="lastname">Last name:</label>
                     <input type="text" name="lastname" placeholder="Last Name"><br>
-                    Email:
+                    <label for="email">Email:</label>
                     <input type="email" name="email" placeholder="Your Email"><br>
-                    Contact phone:
+                    <label for="phone">Contact phone:</label>
                     <input type="text" name="phone" placeholder="Your Phone"><br>
-                    Date:
-                    <input type="date" name="date" placeholder="dd/mm/yyyy"><br>
-                    Time:
+                    <label for="date">Date:</label>
+                    <input type="date" name="date" placeholder="dd/mm/yyyy" size="20px"><br>
+                    <label for="time">Time:</label>
                     <input type="time" name="time" placeholder="mm : hh"><br><br>
-                    Comments:
+                    <label for="comments">Comments:</label>
                     <textarea name="comments" form="appointmentform"> </textarea><br>
                     <input type="submit" value="Send"><br>
                     <br>
+                    </fieldset>
                 </form> 
             
             </div>
