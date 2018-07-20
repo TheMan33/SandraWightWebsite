@@ -9,9 +9,9 @@
     </head>
 
     <body>
-        <div id="name"><img src="logo.png" style="width: 7.4%; float: left;"></div>
+        <div id="name"><a href="index.html"><img src="logo.png" style="width: 7.4%; float: left;"></a></div>
         <div class="navbar">
-            <a href="index.html">Home</a>
+            <a href="newsletter.html">Newsletter</a>
             <a href="" target="_blank">Shop</a>
             <a href="appointment.html">Appointments</a>
             <a href="contact.html">Contact Me</a>
@@ -20,7 +20,23 @@
         </div>
 
         <div id="main">
-            Coming soon!
+            <form action="submitted-newsletter.php" id="newsletterform" method="POST">
+                Every now and then I like to send out a newsletter to my followers. It can include health tips, nourishing recipes,
+                appointment discounts and more! <br>
+                If that sounds like something you would be interested in, just enter your details and hit the sign-up button below! <br>
+                You can unsubscribe at any time.
+               
+                <fieldset>
+                    <label for="firstname">First name:</label>
+                    <input type="text" name="firstname" placeholder="First Name"><br>
+                    <label for="lastname">Last name:</label>
+                    <input type="text" name="lastname" placeholder="Last Name"><br>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" placeholder="Your Email"><br>
+                    <input type="submit" value="Send"><br>
+                    <br>
+                </fieldset>
+            </form> 
 
         </div>
 
