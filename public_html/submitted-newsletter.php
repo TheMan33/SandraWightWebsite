@@ -1,30 +1,24 @@
 <?php
 $servername = "localhost";
-$username = "SandraWight";
+$username = "sandra01";
 $password = "wightwoman";
 
 $conn = new mysqli($servername, $username, $password);
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-} 
-
-$sql = "CREATE DATABASE IF NOT EXISTS emailList";
-if (mysqli_query($conn, $sql)) {
-    echo "Database created successfully";
-} else {
-    echo "Error creating database: " . mysqli_error($conn);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
-$email = newsletter($_POST[email]);
-$name = newsletter($_POST[name]);
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
+$email = $_POST['email'];
 
-$sql = "INSERT INTO emailList (name, email) VALUES ($name, $email)";
+$sql = "INSERT INTO sandrawight.newsletter (firstname, lastname, email) VALUES ('$firstname', '$lastname', '$email')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    die("Error: " . $sql . "<br>" . $conn->error);
 }
 
 $conn->close();
@@ -32,5 +26,3 @@ $conn->close();
 /*header( 'Location: /index.html' );*/
 
 ?>
-
-
