@@ -26,7 +26,11 @@ echo $email_body;
 $email_to = "sandrawight@hotmail.com";
 $headers = "From: $email_from \r\n";
 
-mail($email_to, $email_subject, $email_body, $headers);
+if(mail($email_to, $email_subject, $email_body, $headers)){
+    header('Location: appointment-sent.html');
+} else{
+    header('Location: appointment-unsent.html');
+}
 
-header('Location: index.html');
+
 ?>

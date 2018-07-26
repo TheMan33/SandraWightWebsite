@@ -6,7 +6,8 @@ $password = "wightwoman";
 $conn = new mysqli($servername, $username, $password);
 
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    $conn->close();
+    header( 'Location: /unable-to-connect.html' );
 }
 
 $firstname = $_POST['firstname'];
@@ -16,13 +17,11 @@ $email = $_POST['email'];
 $sql = "INSERT INTO sandrawight.newsletter (firstname, lastname, email) VALUES ('$firstname', '$lastname', '$email')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    $conn->close();
+    header( 'Location: /subscribed.html' );
 } else {
-    die("Error: " . $sql . "<br>" . $conn->error);
+    $conn->close();
+    header( 'Location: /not-subscribed.html' );
 }
-
-$conn->close();
-
-/*header( 'Location: /index.html' );*/
 
 ?>
