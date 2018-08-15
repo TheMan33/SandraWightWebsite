@@ -21,9 +21,9 @@ $email_to = "sandrawight@hotmail.com";
 $headers = "From: $email_from \r\n";
 
 if(mail($email_to, $email_subject, $email_body, $headers)){
-    header('Location: appointment-sent.html');
+    header('Location: contact-sent.html');
 } else{
-    header('Location: appointment-unsent.html');
+    header('Location: contact-unsent.html');
 }
 
 
